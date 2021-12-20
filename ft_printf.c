@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 20:33:38 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/18 21:20:29 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/20 19:05:39 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,26 +48,29 @@ int	ft_check_next(char *format)
 
 int	ft_flag(char *format, va_list args)
 {
+	int length;
+	
+	length = 0;
 	if (*format == 'c')
-		ft_char(va_arg(args, int));
+		length += ft_char(va_arg(args, int));
 	else if (*format == 's')
-		ft_string(va_arg(args, char *));
+		length += ft_string(va_arg(args, char *));
 	else if (*format == 'i' || *format == 'd')
-		ft_putnumber(va_arg(args, long int));
+		length += ft_number(va_arg(args, int));
 	else if (*format == 'u')
-		ft_putnumber_u(va_arg(args, unsigned int));
-	else if (*format == 'x')
-		ft_puthex_x(va_arg(args, unsigned int));
+		length += ft_unsigned(va_arg(args, unsigned int));
+    else if (*format == 'x')
+		length += ft_puthex_x(va_arg(args, unsigned int));
 	else if (*format == 'X')
-		ft_puthex_upper(va_arg(args, unsigned int));
+		length += ft_puthex_upper(va_arg(args, unsigned int));
 	else if (*format == 'p')
 	{
-		ft_string("0x");
-		ft_pointer(va_arg(args, unsigned long int));
+		length += ft_string("0x");
+		length += ft_pointer(va_arg(args, unsigned long long int));
 	}
 	else if (*format == '%')
-		ft_char('%');
-	return (0);
+		length += ft_char('%');
+	return (length);
 }
 
 int	ft_printf(const char *ft, ...)
@@ -91,15 +94,4 @@ int	ft_printf(const char *ft, ...)
 	}
 	va_end(args);
 	return (length);
-}
-
-
-int main (void)
-{
-	int c;
-	c = 'a';
-	char d[10] = "abc";
-
-	ft_printf("Hi %c\n%d\n", c, d);
-    return (0);
 }

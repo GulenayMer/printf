@@ -6,7 +6,7 @@
 #    By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/13 18:53:33 by mgulenay          #+#    #+#              #
-#    Updated: 2021/12/18 21:04:29 by mgulenay         ###   ########.fr        #
+#    Updated: 2021/12/20 19:15:57 by mgulenay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,16 @@ NAME = libftprintf.a
 SRCS = ft_printf.c \
 		ft_helper1.c \
 		ft_helper2.c \
+		ft_itoa.c \
+		ft_itoaunsigned.c \
 
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
 SRC_OBJS	=	$(SRCS:.c=.o)
+
+RM          =	rm -f
 
 all : $(NAME)
 
