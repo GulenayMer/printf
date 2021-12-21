@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 21:00:53 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/20 19:13:56 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/21 22:05:58 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_puthex_upper(unsigned int number)
 	return(ft_hex_length(number));
 }
 
-int ft_pointer_length(unsigned long long number)
+int ft_pointer_length(unsigned long number)
 {
 	int length;
 
@@ -61,7 +61,7 @@ int ft_pointer_length(unsigned long long number)
 	return (length);
 }
 
-int	ft_pointer(unsigned long long int p)
+int	ft_pointer(unsigned long int p)
 {
 	if (p > 15)
 		ft_pointer(p / 16);

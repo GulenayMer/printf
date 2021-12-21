@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 18:53:39 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/20 19:11:00 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/21 22:03:55 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@
 # include <stdlib.h>
 
 int		ft_printf(const char *ft, ...);
-int		ft_flag(char *format, va_list args);
-int		ft_check_next(char *format);
-char	*ft_check_char(const char *ft, int c);
+int		ft_flag(char format, va_list args);
+
 int		ft_char(int c);
 char	ft_string(char *s);
 
@@ -38,7 +37,9 @@ int		ft_hex_length(unsigned int n);
 int		ft_puthex_x(unsigned int number);
 int		ft_puthex_upper(unsigned int number);
 
-int		ft_pointer_length(unsigned long long number);
-int		ft_pointer(unsigned long long int p);
+int		ft_pointer_length(unsigned long number);
+int		ft_pointer(unsigned long int p);
+
+int		ft_percentage(int c);
 
 #endif
