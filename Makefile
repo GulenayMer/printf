@@ -6,7 +6,7 @@
 #    By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/13 18:53:33 by mgulenay          #+#    #+#              #
-#    Updated: 2021/12/20 19:20:51 by mgulenay         ###   ########.fr        #
+#    Updated: 2021/12/22 18:25:40 by mgulenay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS = ft_printf.c \
 		ft_helper1.c \
 		ft_helper2.c \
 		ft_itoa.c \
-		ft_itoaunsigned.c \
+		ft_unsigned.c \
 
 CC = gcc
 

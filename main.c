@@ -13,12 +13,17 @@ int		main(void) {
 /* 	ft_printf("\nHello\n");
 	printf("\nHello\n"); */
 
- /* 	int e, f;
+/*  	int e, f;
 	e = 2147483647;
 	f = -2147483648;
 	ft_printf("\n%d\n%i\n", e, f);
 	printf("\n%d\n%i\n", e, f); */
 
+/* ft_printf("42 - 84 is %d\n", -42);
+printf("42 - 84 is %d\n", -42); */
+
+ft_printf("%u%u%u%lu", 429896724, 0, 32, 4294967295);
+printf("%u%u%u%lu", 429896724, 0, 32, 4294967295);
 
 /* 	int k, l;
 	k = 4294967295;

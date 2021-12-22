@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 16:49:16 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/20 18:56:20 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/22 18:42:49 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,6 @@ int ft_number(int n)
 	length = 0;
 	number = ft_itoa(n);
 	length = ft_string(number);
-	//free(number);
+	free(number);
 	return(length);
 }
