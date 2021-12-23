@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 16:49:16 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/22 18:42:23 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/23 22:03:53 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,6 @@ int	ft_unsigned_length(unsigned int n)
 	return (length);
 }
 
-/* void	ft_putnumber_unsigned(unsigned int number, int c, char *s)
-{
-	while (--c >= 0)
-	{
-		s[c] = (number % 10) + '0';
-		number = number / 10;
-	}
-} */
-
-
 char	*ft_str_unsigned(unsigned int n)
 {
 	char	*str;
@@ -48,14 +38,14 @@ char	*ft_str_unsigned(unsigned int n)
 		if (!str)
 			return (0);
 		str[length] = '\0';
-	while(n != 0)
+	while(length >= 0)
 	{
 		str[length - 1] = (n % 10) + '0';
 		n = n / 10;
 		length--;
 	}
 	return (str);
-}
+} 
 
 
 int ft_unsigned(unsigned int n)
@@ -63,14 +53,9 @@ int ft_unsigned(unsigned int n)
 	int		length;
 	char	*number;
 
+	number = ft_str_unsigned(n);
 	length = 0;
-	if (!n)
-		length += ft_char('0');
-	else
-	{
-		number = ft_str_unsigned(n);
-		length += ft_string(number);
-	}
+	length += ft_string(number);
 	free(number);
 	return(length);
 }

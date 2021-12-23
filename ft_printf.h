@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 18:53:39 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/21 22:03:55 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/23 22:08:58 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_unsigned_length(unsigned int n);
 
 int		ft_number(int n);
 char	*ft_itoa(int n);
-void	ft_putnumber(long number, int c, char *s);
+void	ft_putnumber(long number, int count, char *s);
 int		ft_length(long int n);
 
 int		ft_hex(unsigned int number);

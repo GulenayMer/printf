@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 16:49:16 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/22 18:42:49 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/23 22:15:58 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ int	ft_length(long int n)
 	return (length);
 }
 
-void	ft_putnumber(long number, int c, char *s)
+void	ft_putnumber(long number, int count, char *s)
 {
 	if (number < 0)
 	{
 		s[0] = '-';
 		number = -number;
 		s++;
-		s[c] = 0;
+		s[count] = 0;
 	}
-	while (--c >= 0)
+	while (--count >= 0)
 	{
-		s[c] = (number % 10) + '0';
+		s[count] = (number % 10) + '0';
 		number = number / 10;
 	}
 }

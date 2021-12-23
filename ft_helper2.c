@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 21:00:53 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/22 18:50:02 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/22 20:11:29 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int ft_pointer_length(unsigned long number)
 
 int	ft_pointer(unsigned long int p)
 {
+	if (p == 0)
+		ft_string("(nil)");
 	if (p > 15)
 		ft_pointer(p / 16);
 	if (p % 16 > 9)

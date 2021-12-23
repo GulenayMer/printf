@@ -9,6 +9,15 @@ int		main(void) {
 	d = "a new year is coming.";
 	ft_printf("%c\n%s\n", c, d);
 	printf("%c\n%s\n", c, d); */
+	/* ft_printf("%s\n", " ");
+	printf("%s\n", " "); */
+	/* ft_printf("%s\n", NULL);
+	printf("%s\n", NULL);  */  //prints (null)
+
+  /*   char *s2 = "Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus.";
+    //printf(" %s %s %s %s %s", " - ", "", "4", "", s2);
+    ft_printf(" %s %s %s %s %s\n", " - ", "", "4", "", s2);
+	printf(" %s %s %s %s %s\n", " - ", "", "4", "", s2); */
 
 /* 	ft_printf("\nHello\n");
 	printf("\nHello\n"); */
@@ -22,9 +31,9 @@ int		main(void) {
 /* ft_printf("42 - 84 is %d\n", -42);
 printf("42 - 84 is %d\n", -42); */
 
-ft_printf("%u%u%u%lu", 429896724, 0, 32, 4294967295);
-printf("%u%u%u%lu", 429896724, 0, 32, 4294967295);
-
+ /* ft_printf("%u%u%u%u\n", (unsigned int)429896724, 0, 32, (unsigned int)4294967295);
+ printf("%u%u%u%u\n", (unsigned int)429896724, 0, 32, (unsigned int)4294967295);
+ */
 /* 	int k, l;
 	k = 4294967295;
 	l = 0;
@@ -48,6 +57,10 @@ printf("%u%u%u%lu", 429896724, 0, 32, 4294967295);
 	//long int h = 9223372036854775807;
 	ft_printf("%p\n", &h);
 	printf("%p\n", &h); */
+/* 	int h = 0;
+ ft_printf(" %p ", &h);
+  printf(" %p ", &h); */
 
-    return (0);
+/*   ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+ */    return (0);
 }
