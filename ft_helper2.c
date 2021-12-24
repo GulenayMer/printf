@@ -6,18 +6,20 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 21:00:53 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/22 20:11:29 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/24 20:59:20 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_hex_length(unsigned int n)
+int	ft_hex_length(unsigned int n)
 {
-	int length;
+	int	length;
 
 	length = 0;
-	while(n != 0)
+	if (n == 0)
+		return (1);
+	while (n != 0)
 	{
 		n = n / 16;
 		length++;
@@ -33,9 +35,8 @@ int	ft_puthex_x(unsigned int number)
 		ft_char(number % 16 + 87);
 	else
 		ft_char(number % 16 + '0');
-	return(ft_hex_length(number));
+	return (ft_hex_length(number));
 }
-
 
 int	ft_puthex_upper(unsigned int number)
 {
@@ -45,14 +46,16 @@ int	ft_puthex_upper(unsigned int number)
 		ft_char(number % 16 + 55);
 	else
 		ft_char(number % 16 + '0');
-	return(ft_hex_length(number));
+	return (ft_hex_length(number));
 }
 
-int ft_pointer_length(unsigned long number)
+int	ft_pointer_length(unsigned long number)
 {
-	int length;
+	int		length;
 
 	length = 0;
+	if (number == 0)
+		return (1);
 	while (number != 0)
 	{
 		number = number / 16;
@@ -64,12 +67,19 @@ int ft_pointer_length(unsigned long number)
 int	ft_pointer(unsigned long int p)
 {
 	if (p == 0)
-		ft_string("(nil)");
+	{
+		ft_char('0');
+		return (1);
+	}
 	if (p > 15)
 		ft_pointer(p / 16);
 	if (p % 16 > 9)
+	{	
 		ft_char((p % 16) + 87);
+	}
 	else
+	{	
 		ft_char((p % 16) + '0');
-	return(ft_pointer_length(p));
+	}
+	return (ft_pointer_length(p));
 }

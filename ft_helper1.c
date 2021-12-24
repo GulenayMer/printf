@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 20:33:24 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/23 18:25:11 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/24 20:56:11 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,20 @@
 written  */
 int	ft_char(int c)
 {
-	int count;
+	int	count;
+
 	count = write(1, &c, 1);
 	return (count);
 }
 
-char	ft_string(char *s)
+int	ft_string(char *s)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	count = 0;
 	i = 0;
- 	if (!s)
+	if (!s)
 	{
 		s = "(null)";
 		while (s[i])
@@ -41,10 +42,10 @@ char	ft_string(char *s)
 		count += ft_char(s[i]);
 		i++;
 	}
-	return(count);
+	return (count);
 }
 
-int ft_percentage(int c)
+int	ft_percentage(int c)
 {
 	c = '%';
 	ft_char(c);

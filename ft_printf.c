@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 20:33:38 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/21 22:06:06 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/24 21:06:33 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_flag(char format, va_list args)
 {
-	int length;
-	
+	int		length;
+
 	length = 0;
 	if (format == 'c')
 		length += ft_char(va_arg(args, int));
@@ -25,7 +25,7 @@ int	ft_flag(char format, va_list args)
 		length += ft_number(va_arg(args, int));
 	else if (format == 'u')
 		length += ft_unsigned(va_arg(args, unsigned int));
-    else if (format == 'x')
+	else if (format == 'x')
 		length += ft_puthex_x(va_arg(args, unsigned int));
 	else if (format == 'X')
 		length += ft_puthex_upper(va_arg(args, unsigned int));
@@ -39,15 +39,13 @@ int	ft_flag(char format, va_list args)
 	return (length);
 }
 
-
-
 int	ft_printf(const char *ft, ...)
 {
 	va_list	args;
 	int		length;
 	char	*format;
 	int		i;
-	
+
 	va_start(args, ft);
 	format = (char *)ft;
 	length = 0;

@@ -6,7 +6,7 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 16:49:16 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/23 22:15:58 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/24 21:01:14 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_length(long int n)
 {
-	int length;
+	int		length;
 
 	length = 0;
 	if (n == 0)
@@ -47,9 +47,9 @@ void	ft_putnumber(long number, int count, char *s)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
 	unsigned int	length;
-	long	number;
+	char			*str;
+	long			number;
 
 	number = n;
 	length = ft_length(number);
@@ -70,14 +70,14 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int ft_number(int n)
+int	ft_number(int n)
 {
-	int length;
-	char *number;
+	char	*number;
+	int		length;
 
 	length = 0;
 	number = ft_itoa(n);
 	length = ft_string(number);
 	free(number);
-	return(length);
+	return (length);
 }
