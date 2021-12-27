@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_helper2.c                                       :+:      :+:    :+:   */
+/*   ft_printf_helper.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 21:00:53 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/24 20:59:20 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:54:09 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hex_length(unsigned int n)
+int	ft_hex_length(unsigned int number)
 {
 	int	length;
 
 	length = 0;
-	if (n == 0)
+	if (number == 0)
 		return (1);
-	while (n != 0)
+	while (number != 0)
 	{
-		n = n / 16;
+		number = number / 16;
 		length++;
 	}
 	return (length);
@@ -49,7 +49,7 @@ int	ft_puthex_upper(unsigned int number)
 	return (ft_hex_length(number));
 }
 
-int	ft_pointer_length(unsigned long number)
+int	ft_pointer_length(unsigned long long number)
 {
 	int		length;
 
@@ -64,7 +64,7 @@ int	ft_pointer_length(unsigned long number)
 	return (length);
 }
 
-int	ft_pointer(unsigned long int p)
+int	ft_pointer(unsigned long long p)
 {
 	if (p == 0)
 	{

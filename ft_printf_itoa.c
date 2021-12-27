@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_printf_itoa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 16:49:16 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/24 21:01:14 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:47:03 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,19 @@ int	ft_length(long int n)
 	return (length);
 }
 
-void	ft_putnumber(long number, int count, char *s)
+void	ft_putnumber(long n, int count, char *s)
 {
-	if (number < 0)
+	if (n < 0)
 	{
 		s[0] = '-';
-		number = -number;
+		n = -n;
 		s++;
 		s[count] = 0;
 	}
 	while (--count >= 0)
 	{
-		s[count] = (number % 10) + '0';
-		number = number / 10;
+		s[count] = (n % 10) + '0';
+		n = n / 10;
 	}
 }
 

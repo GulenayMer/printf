@@ -6,11 +6,41 @@
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 20:33:38 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/24 21:06:33 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/26 17:31:09 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_char(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_string(char *s)
+{
+	int	i;
+	int	count;
+
+	count = 0;
+	i = 0;
+	if (!s)
+	{
+		s = "(null)";
+		while (s[i])
+		{
+			count += ft_char(s[i]);
+			i++;
+		}
+	}
+	while (s[i] != '\0')
+	{
+		count += ft_char(s[i]);
+		i++;
+	}
+	return (count);
+}
 
 int	ft_flag(char format, va_list args)
 {
@@ -32,10 +62,10 @@ int	ft_flag(char format, va_list args)
 	else if (format == 'p')
 	{
 		length += ft_string("0x");
-		length += ft_pointer(va_arg(args, unsigned long int));
+		length += ft_pointer(va_arg(args, unsigned long long));
 	}
 	else if (format == '%')
-		length += ft_percentage(va_arg(args, int));
+		length += ft_char('%');
 	return (length);
 }
 

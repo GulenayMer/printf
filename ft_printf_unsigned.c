@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unsigned.c                                      :+:      :+:    :+:   */
+/*   ft_printf_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 16:49:16 by mgulenay          #+#    #+#             */
-/*   Updated: 2021/12/24 21:02:33 by mgulenay         ###   ########.fr       */
+/*   Updated: 2021/12/27 10:12:06 by mgulenay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_unsigned_length(unsigned int n)
 {
-	int	length;
+	unsigned int	length;
 
 	length = 0;
 	if (n == 0)

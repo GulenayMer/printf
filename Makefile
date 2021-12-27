@@ -6,17 +6,16 @@
 #    By: mgulenay <mgulenay@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/13 18:53:33 by mgulenay          #+#    #+#              #
-#    Updated: 2021/12/22 18:25:40 by mgulenay         ###   ########.fr        #
+#    Updated: 2021/12/26 17:35:30 by mgulenay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRCS = ft_printf.c \
-		ft_helper1.c \
-		ft_helper2.c \
-		ft_itoa.c \
-		ft_unsigned.c \
+SRCS = 	ft_printf.c \
+		ft_printf_helper.c \
+		ft_printf_itoa.c \
+		ft_printf_unsigned.c \
 
 CC = gcc
 
